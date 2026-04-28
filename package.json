@@ -1,0 +1,67 @@
+{
+  "name": "react-example",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "electron.js",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "start": "node dist/server.cjs",
+    "build": "vite build && tsx esbuild.server.ts",
+    "preview": "vite preview",
+    "clean": "rm -rf dist",
+    "lint": "tsc --noEmit",
+    "electron": "electron .",
+    "electron:build": "npm run build && electron-builder"
+  },
+  "author": "Sanopalz",
+  "description": "Minecraft server management panel with Electron support",
+  "build": {
+    "appId": "com.sanopalz.serverpanel",
+    "productName": "Sanopalz Server Panel",
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "dependencies": {
+    "@google/genai": "^1.29.0",
+    "@tailwindcss/vite": "^4.1.14",
+    "@vitejs/plugin-react": "^5.0.4",
+    "archiver": "^7.0.1",
+    "axios": "^1.15.2",
+    "clsx": "^2.1.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "multer": "^2.1.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^6.0.1",
+    "systeminformation": "^5.31.5",
+    "tailwind-merge": "^3.5.0",
+    "vite": "^6.2.0"
+  },
+  "devDependencies": {
+    "@types/archiver": "^7.0.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.21",
+    "@types/multer": "^2.1.0",
+    "@types/node": "^22.14.0",
+    "autoprefixer": "^10.4.21",
+    "electron": "^41.3.0",
+    "electron-builder": "^26.8.1",
+    "esbuild": "^0.28.0",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}

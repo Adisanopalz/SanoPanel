@@ -1,0 +1,6 @@
+{
+  "name": "Sanopalz Server Panel",
+  "description": "Minecraft server management panel with Electron support",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
